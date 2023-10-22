@@ -14,6 +14,12 @@ app.use((req, res, next) => {
     next();
 });
 
+app.get('/', (req, res) => {
+    res.json({
+        message: 'API MyFeira funcionando',
+    });
+});
+
 app.get('/api/hello', (req, res) => {
     res.json({
         client: 'Michel',
